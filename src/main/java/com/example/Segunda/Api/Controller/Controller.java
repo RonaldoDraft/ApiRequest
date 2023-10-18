@@ -33,7 +33,7 @@ public class Controller {
         }
         return ResponseEntity.status(HttpStatus.OK).body(product0);
     }
-    @GetMapping("/ApiProducts")
+    @GetMapping("/ApiAllProducts")
     public ResponseEntity<Object> consultProduct3(@RequestBody @Valid Product product){
         String name = product.getName();
         System.out.println(name);
