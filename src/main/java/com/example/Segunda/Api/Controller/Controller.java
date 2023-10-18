@@ -33,6 +33,16 @@ public class Controller {
         }
         return ResponseEntity.status(HttpStatus.OK).body(product0);
     }
+    @GetMapping("/ApiProducts")
+    public ResponseEntity<Object> consultProduct3(@RequestBody @Valid Product product){
+        String name = product.getName();
+        System.out.println(name);
+        String product0 = ApiService2.fazerRequisicaoPost2(name);
+        if(product0.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found. ");
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(product0);
+    }
 
 
 }
