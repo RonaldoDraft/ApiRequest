@@ -1,12 +1,11 @@
 package com.example.Segunda.Api.DtoJson;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import lombok.Data;
 
 import java.math.BigDecimal;
-@Data
+
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Product {
+public class AllProducts {
 
     private String name;
     private BigDecimal value;
