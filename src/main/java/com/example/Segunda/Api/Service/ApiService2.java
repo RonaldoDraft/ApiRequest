@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 @Service
 public class ApiService2 {
     public static String fazerRequisicaoPost2(String name) {
-        WebClient webClient = WebClient.create("http://localhost:8080");
+        WebClient webClient = WebClient.create("ec2-15-228-253-49.sa-east-1.compute.amazonaws.com:8080");
         Mono<String> responseBody = webClient.get()
                 .uri("/products")
                 .retrieve()
