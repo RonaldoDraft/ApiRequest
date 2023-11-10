@@ -11,4 +11,7 @@ public class Product {
     private String name;
     private BigDecimal value;
 
+    private String tipe;
+    private String moeda;
+
 }
